@@ -1,0 +1,80 @@
+body {
+    font-family: "Arial", sans-serif;
+    font-variant: small-caps;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+    background: linear-gradient(-45deg, #8A2BE2, #1E90FF, #000000, #FF1493);
+    background-size: 400% 400%;
+    animation: gradientBG 12s infinite alternate ease-in-out;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.music-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.heart {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    opacity: 0.6;
+    z-index: -1;
+    font-size: 24px;
+    animation: floatingHearts 8s linear infinite, glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.6); }
+    100% { text-shadow: 0 0 15px rgba(255, 255, 255, 1); }
+}
+
+@keyframes floatingHearts {
+    0% { transform: translateY(100vh) scale(1); opacity: 1; }
+    100% { transform: translateY(-10vh) scale(0.5); opacity: 0; }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.text-block {
+    font-size: 20px;
+    font-variant: small-caps;
+    margin-bottom: 20px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 300px;
+}
+
+.photo-grid img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+
+
